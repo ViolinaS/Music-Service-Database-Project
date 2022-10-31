@@ -66,3 +66,22 @@ ADD COLUMN duration time;
 -- Исправление имени констрейнта в Tracks_collection
 ALTER TABLE Tracks_collection
 RENAME CONSTRAINT pk TO pk_tracks_collection;
+
+-- Иправление связи в таблице треков
+ALTER TABLE Music_Tracks
+DROP COLUMN id CASCADE;
+
+ALTER TABLE Music_tracks
+ADD COLUMN id SERIAL PRIMARY KEY NOT NULL;
+
+ALTER TABLE Music_tracks
+ADD COLUMN album_id INTEGER REFERENCES Album(id);
+
+ALTER TABLE Tracks_collection 
+DROP COLUMN music_tracks_id;
+
+ALTER TABLE Tracks_collection
+ADD COLUMN music_tracks_id INTEGER REFERENCES Music_tracks(id);
+
+ALTER TABLE Tracks_collection
+ADD CONSTRAINT pk_tracks_collection PRIMARY KEY (music_tracks_id, collection_id);
