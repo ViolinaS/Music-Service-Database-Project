@@ -68,6 +68,9 @@ VALUES
 ('Listen to my heart','9','3:42'),
 ('Bette Davis Eyes','9','1:32');
 
+INSERT INTO music_tracks (name, album_id, duration)
+VALUES ('Running', '9', '00:03:30');
+
 INSERT INTO collection (name, release_year)
 VALUES
 ('Cry','2019'),
