@@ -104,9 +104,9 @@ INSERT INTO singer_genres (genres_id, singer_id)
 VALUES
 (generate_series(3, 6),generate_series(7, 10));
 
--- Генерация album + singer для условия: 
--- a). Теперь альбом могут выпустить несколько исполнителей вместе. 
--- б). Как и исполнитель может принимать участие во множестве альбомов.
+-- Генерация album + singer: 
+-- a). Альбом могут выпустить несколько исполнителей вместе. 
+-- б). Исполнитель может принимать участие во множестве альбомов.
 INSERT INTO album_singer (singer_id, album_id)
 VALUES
 (generate_series(1, 10),generate_series(1, 10));
