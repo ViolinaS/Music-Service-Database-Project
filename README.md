@@ -1,5 +1,5 @@
-# Проект базы данных музыкального сервиса
-*Пример работы с PostgreSQL*
+# Проект базы данных музыкального сервиса ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+*Пример работы с PostgreSQL* 
 
 ## Создание таблиц и связей между ними:
 ### Таблицы:
